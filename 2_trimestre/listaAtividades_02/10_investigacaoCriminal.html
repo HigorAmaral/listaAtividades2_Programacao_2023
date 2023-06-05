@@ -11,7 +11,37 @@
     */
 
     //ENTRADA
+    alert("Responda as perguntas próximas perguntas com 'S' ou 'N'");
+    const pergunta1 = prompt("Telefonou para vítima?").toLocaleUpperCase().trim();
+    const pergunta2 = prompt("Esteve no local do crime").toLocaleUpperCase().trim();
+    const pergunta3 = prompt("Mora perto da vítima?").toLocaleUpperCase().trim();
+    const pergunta4 = prompt("Devia para a vítima?").toLocaleUpperCase().trim();
+    const pergunta5 = prompt("Já trabalhou com a vítima?").toLocaleUpperCase().trim();
+    let valor = 0;
 
+    pergunta1 == "S" ? valor1 = 1 : valor1 = 0;
+    pergunta2 == "S" ? valor2 = 1 : valor2 = 0;
+    pergunta3 == "S" ? valor3 = 1 : valor3 = 0;
+    pergunta4 == "S" ? valor4 = 1 : valor4 = 0;
+    pergunta5 == "S" ? valor5 = 1 : valor5 = 0;
+
+    const somaFinal = valor1 + valor2 + valor3 + valor4 + valor5;
+
+    if (somaFinal < 2) {
+        document.write("Você é inocente");
+    }
+
+    else if (somaFinal === 2) {
+        document.write("Você é suspeito");
+    }
+
+    else if (somaFinal > 2 && somaFinal < 5) {
+        document.write("Você é cúmplice");
+    }
+
+    else if (somaFinal === 5) {
+        document.write("Você é o assassino");
+    }
     //PROCESSAMENTO
 
     //SAÍDA
