@@ -11,7 +11,38 @@
     */
 
     //ENTRADA
+    let int = Number(prompt("Informe um número inteiro menor que 1000"));
+    let cent = 0;
+    let dez = 0;
+    let uni = 0;
+    let mensagem = `O número possui: <nr>`;
 
+    if (int > 0 && int < 1000) {
+
+        cent = Math.floor(int / 100)
+        int = int - (cent * 100)
+        dez = Math.floor(int / 10)
+        int = int - (dez * 10)
+        uni = Math.floor(int)
+        int = int - uni
+        
+        if (cent > 0) {
+            cent >= 2 ? mensagem = `${mensagem} ${cent} Centenas <nr>` : mensagem = `${mensagem} ${cent} Centena <nr>`
+        }
+
+        if (dez > 0) {
+            dez >= 2 ? mensagem = `${mensagem} ${dez} Dezenas <nr>` : mensagem = `${mensagem} ${dez} Dezena <nr>`
+        }
+
+        if (uni > 0) {
+            uni >= 2 ? mensagem = `${mensagem} ${uni} Unidades <nr>` : mensagem = `${mensagem} ${uni} Unidade <nr>`
+        }
+
+        document.write(`${mensagem}`)
+
+    } else {
+        alert(`Apenas números menores que 1000!`);
+    }
 
     //PROCESSAMENTO
 
