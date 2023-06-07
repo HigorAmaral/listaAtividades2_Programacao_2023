@@ -1,3 +1,4 @@
+<meta charset="UTF-8" />
 <script>
     /*
     //PROBLEMA
@@ -14,11 +15,26 @@
     */
 
     //ENTRADA
-
-
+    const álcool = prompt("Informe qual o tipo combustível que voce iriar comprar, se for álcool responda(A) e se for gasolina responda responda (G)").toLowerCase;
+    let litro = Number(prompt("Informe quantos litros que voce irar comprar!"));
     //PROCESSAMENTO
-
-    
+    if (álcool == "A") {
+        alert("Álcool");
+    }
+    else if (álcool == "G") {
+        alert("Gasolina");
+    }
+    if (álcool == "G") {
+        litros <= 20 ? preco = litros * 6.24 : preco = litros * 6.11
+        alert(`O valor a ser pago é de ${litro.toFixed(1).replace(".", ",")} R$`);
+    }
+    else if (álcool == "A") {
+        litros <= 20 ? preco = litros * 5.917 : preco = litros * 5.795;
+        document.write(`O valor a ser pago é de ${álcool.toFixed(1).replace(".", ",")} R$`);
+    }
+else{
+    alert("Opção invalidada");
+}
     //SAÍDA
 
 
