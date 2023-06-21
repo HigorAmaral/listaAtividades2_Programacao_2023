@@ -7,9 +7,9 @@
     */
 
     let saque = Number(prompt(`Qual a quantia que deseja sacar?`));
-    
+
     let mensagemFinal = `Para sacar a quantia de R$ ${saque.toFixed(2)}, o script fornece `;
-    
+
     const notasCem = Math.floor(saque / 100);
     saque = saque % 100;
     const notasCinquenta = Math.floor(saque / 50);
@@ -56,5 +56,5 @@
         }
     }
 
-    document.write(mensagemFinal);
+    alert(mensagemFinal);
 </script>
